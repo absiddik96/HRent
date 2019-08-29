@@ -48,7 +48,7 @@ class User extends Authenticatable
     ];
 
     protected $appends = [
-        'user_status', 'verified'
+        'user_status', 'verified', 'user_role'
     ];
 
     public function user_role()
@@ -86,5 +86,10 @@ class User extends Authenticatable
         } else {
             return '';
         }
+    }
+
+    protected function getUserRoleAttribute()
+    {
+        return UserRole::findOrFail($this->user_role_id)->role;
     }
 }

@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', 'Api\V1\Auth\AuthController@login')->name('api.auth.login');
 
-Route::group(['middleware' => 'auth:api', 'prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
     // Admin
     Route::apiResource('/', 'AdminController', ['parameters' => ['' => 'admin'], 'as' => 'admin']);
 });

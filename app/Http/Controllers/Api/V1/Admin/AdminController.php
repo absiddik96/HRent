@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Admin;
-use App\Models\UserRole;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -33,7 +32,7 @@ class AdminController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
         
-        $request['user_role_id'] = UserRole::where('role','admin')->first()->id;
+        $request['user_role_id'] = Admin::role();
         $request['password'] = bcrypt($request->password);
 
         Admin::create($request->all());
