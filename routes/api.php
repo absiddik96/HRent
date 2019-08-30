@@ -21,6 +21,7 @@ Route::post('login', 'Api\V1\Auth\AuthController@login')->name('api.auth.login')
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
     // Admin
-    Route::apiResource('/', 'AdminController', ['parameters' => ['' => 'admin'], 'as' => 'admin']);
+    Route::apiResource('/admin', 'AdminController', ['as' => 'admin']);
+    Route::apiResource('/house-types', 'House\HouseTypesController', ['as' => 'admin']);
 });
 
