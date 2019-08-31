@@ -23,5 +23,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'
     // Admin
     Route::apiResource('/admin', 'AdminController', ['as' => 'admin']);
     Route::apiResource('/house-types', 'House\HouseTypesController', ['as' => 'admin']);
+    Route::apiResource('/customer-types', 'Customer\CustomerTypesController', ['as' => 'admin']);
 });
 
