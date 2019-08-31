@@ -28,5 +28,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'
     Route::apiResource('/customer-types', 'Customer\CustomerTypesController', ['as' => 'admin']);
     // Rent
     Route::apiResource('/rent-types', 'Rent\RentTypesController', ['as' => 'admin']);
+    // Location
+    Route::group(['namespace' => 'Location'], function (){
+        // Country
+        Route::apiResource('/countries', 'CountriesController', ['as' => 'admin']);
+    });
 });
 

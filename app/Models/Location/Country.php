@@ -9,6 +9,12 @@ class Country extends Model
 {
     protected $fillable = ['country', 'slug'];
 
+    public function setCountryAttribute($value)
+    {
+        $this->attributes['country'] = strtolower($value);
+        $this->attributes['slug'] =  str_slug($value);
+    }
+
     public function divisions()
     {
         return $this->hasMany(Division::class);
