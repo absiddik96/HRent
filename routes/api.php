@@ -22,7 +22,11 @@ Route::post('login', 'Api\V1\Auth\AuthController@login')->name('api.auth.login')
 Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
     // Admin
     Route::apiResource('/admin', 'AdminController', ['as' => 'admin']);
+    // House
     Route::apiResource('/house-types', 'House\HouseTypesController', ['as' => 'admin']);
+    // Customer
     Route::apiResource('/customer-types', 'Customer\CustomerTypesController', ['as' => 'admin']);
+    // Rent
+    Route::apiResource('/rent-types', 'Rent\RentTypesController', ['as' => 'admin']);
 });
 
