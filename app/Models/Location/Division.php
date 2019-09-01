@@ -9,6 +9,14 @@ class Division extends Model
 {
     protected $fillable = ['country_id', 'division', 'slug'];
 
+    protected $with = ['country'];
+
+    public function setDivisionAttribute($value)
+    {
+        $this->attributes['division'] = strtolower($value);
+        $this->attributes['slug'] = str_slug($value);
+    }
+
     public function country()
     {
         return $this->belongsTo(Country::class);
