@@ -9,6 +9,14 @@ class City extends Model
 {
     protected $fillable = ['country_id', 'division_id', 'city', 'slug'];
 
+    protected $with = ['country','division'];
+
+    public function setCityAttribute($value)
+    {
+        $this->attributes['city'] = strtolower($value);
+        $this->attributes['slug'] = str_slug($value);
+    }
+
     public function country()
     {
         return $this->belongsTo(Country::class);
@@ -16,7 +24,7 @@ class City extends Model
 
     public function division()
     {
-        return $this->belongsTo(Division::class);
+        return $this->belongsTo(Division::class)->without(['country']);
     }
 
     public function policeStaions()

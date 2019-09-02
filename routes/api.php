@@ -34,6 +34,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'
         Route::apiResource('/countries', 'CountriesController', ['as' => 'admin']);
         // Division
         Route::apiResource('/divisions', 'DivisionsController', ['as' => 'admin']);
+        // City
+        Route::apiResource('/cities', 'CitiesController', ['as' => 'admin']);
     });
 });
 
