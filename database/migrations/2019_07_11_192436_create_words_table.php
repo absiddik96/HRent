@@ -19,7 +19,7 @@ class CreateWordsTable extends Migration
             $table->unsignedBigInteger('division_id')->index();
             $table->unsignedBigInteger('city_id')->index();
             $table->unsignedBigInteger('police_station_id')->index();
-            $table->string('word');
+            $table->string('word_no');
             $table->timestamps();
 
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
