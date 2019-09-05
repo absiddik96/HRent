@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('login', 'Api\V1\Auth\AuthController@login')->name('api.auth.login');
+Route::post('logout', 'Api\V1\Auth\AuthController@loggedOut')->name('api.auth.logout');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
+Route::group(['middleware' => ['auth:api', 'scope:admin'],'prefix' => 'admin', 'namespace' => 'Api\V1\Admin', 'as' => 'api.'], function () {
     // Admin
     Route::apiResource('/admin', 'AdminController', ['as' => 'admin']);
     // House

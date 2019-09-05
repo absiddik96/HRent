@@ -4,7 +4,7 @@ namespace App;
 
 use App\Scopes\LandlordScope;
 
-class Landload extends User
+class Landlord extends User
 {
     protected $table = 'users';
     
