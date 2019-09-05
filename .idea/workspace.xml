@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69b4c2d5-ca1b-412e-99a4-a8e9a13b50a7" name="Default Changelist" comment="">
+    <list default="true" id="69b4c2d5-ca1b-412e-99a4-a8e9a13b50a7" name="Default Changelist" comment="" />
+    <list id="a89ca852-e569-4b98-866a-26ca5b10727b" name="setup &amp; add middleware system and make logout functionality" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/Auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Landlord.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Landlord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/ExceptionTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ExceptionTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,6 +287,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="69b4c2d5-ca1b-412e-99a4-a8e9a13b50a7" name="Default Changelist" comment="" />
+      <changelist id="a89ca852-e569-4b98-866a-26ca5b10727b" name="setup &amp; add middleware system and make logout functionality" comment="" />
       <created>1566460983149</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -308,7 +316,7 @@
       <workItem from="1567484177846" duration="2322000" />
       <workItem from="1567533286899" duration="5357000" />
       <workItem from="1567571983425" duration="5274000" />
-      <workItem from="1567654508422" duration="9641000" />
+      <workItem from="1567654508422" duration="10027000" />
     </task>
     <task id="LOCAL-00001" summary="Make login system for api token with user details by using laravel default login system to improve our login system">
       <created>1567056944166</created>
@@ -328,7 +336,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99421000" />
+    <option name="totallyTimeSpent" value="99807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
